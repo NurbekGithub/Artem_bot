@@ -252,6 +252,7 @@ bot.on("message", async (msg) => {
 			}
 			if (state === STATES.INPUT_PHONE) {
 				state = STATES.FINISHED;
+        user.PHONE = message;
 				await updateUser(chatId, { ...user, state, PHONE: message });
 				break;
 			}
